@@ -1,20 +1,23 @@
 var express = require('express');
-var router = express.Router();
+var indexRouter = express.Router();
+
+const messages = [
+  {
+    title: 'Hi there!',
+    user: 'Amando',
+    mainContent: 'I feel great!',
+    added: new Date(),
+  }, 
+  {
+    title: 'Hello World!',
+    user: 'Charles',
+    mainContent: 'What is up?',
+    added: new Date(),
+  },
+];
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  const messages = [
-    {
-      text: 'Hi there!',
-      user: 'Amando',
-      added: new Date(),
-    },
-    {
-      text: 'Hello World!',
-      user: 'Charles',
-      added: new Date(),
-    },
-  ];
+indexRouter.get('/', function(req, res, next) {
 
   res.render('index', { 
     title: 'Express', 
@@ -22,4 +25,4 @@ router.get('/', function(req, res, next) {
   });
 });
 
-module.exports = router;
+module.exports = {indexRouter, messages};
