@@ -1,11 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div
-    each message in messages
-      div
+  div(class='main-content')
+    button(onclick="location.href='./new';" class='request-form-bttn') got something to say? 
+    div
+      each message in messages
         h1=message.user
         ul
           li=message.title
