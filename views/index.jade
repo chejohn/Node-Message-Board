@@ -1,13 +1,12 @@
 extends layout
 
 block content
-  div(class='main-content')
-    button(onclick="location.href='./new';" class='request-form-bttn') got something to say? 
-    div
-      each message in messages
-        h1=message.user
-        ul
-          li=message.title
-          li=message.mainContent
-          li=message.added
+  button(onclick="location.href='./new';" class='request-form-bttn') got something to say? 
+  each message in messages
+    div(class='card')
+      h1(class='card-header')=message.title
+      p(class='content')=message.mainContent
+      div(class='span-container')
+        span=message.user
+        span=message.added
 
