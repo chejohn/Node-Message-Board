@@ -1,6 +1,7 @@
 
 :root {
   --blue-theme: rgb(24, 166, 213);
+  --border-radius: 8px;
 }
 
 * {
@@ -26,7 +27,7 @@ body {
 
 .request-form-bttn {
   border: var(--blue-theme) solid 2px;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   background-color: transparent;
   color: var(--blue-theme);
   max-width: 400px;
@@ -39,7 +40,7 @@ body {
 }
 
 .card {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   width: 60%;
   max-width: 700px;
   padding: 20px 25px 5px 25px;
@@ -83,11 +84,69 @@ body {
 }
 
 .form-container {
-  margin: auto;
-  background-color: black;
-  height: 200px;
-  width: 80%;
+  margin: 80px auto 0 auto;
+  background-color: white;
+  border-radius: var(--border-radius);
+  height: 360px;
+  width: 75%;
   max-width: 700px;
+  text-align: center;
 }
+
+form {
+  margin: 30px 0 0 0;
+  width: 80%;
+  height: 80%;
+  display: inline-block;
+}
+
+form * {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid silver;
+}
+
+form input, textarea {
+  padding: 8px;
+}
+
+form input[name='title'] {
+  height: 50px;
+  font-size: 24px;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  margin-bottom: -1px;
+}
+
+form textarea[name='mainContent'] {
+  height: 150px;
+  font-size: 16px;
+  resize: none;
+}
+
+form input[name='username'] {
+  height: 50px;
+  font-size: 16px;
+  margin-top: -1px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+form input[type='submit'] {
+  position: relative;
+  top: 22px;
+  color: white;
+  background-color: var(--blue-theme);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
 
 

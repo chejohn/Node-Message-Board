@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {messages} = require('./index');
+const messages = require('../public/javascripts/messages');
+const moment = require('moment');
 
 // Get /new page
 router.get('/', (req, res) => {
@@ -8,11 +9,12 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    messages.push({
-        title: req.body.title,
-        user: req.body.username,
-        mainContent: req.body.mainContent,
-        added: new Date(), 
+    
+    messages.unshift({
+      title: req.body.title,
+      user: req.body.username,
+      mainContent: req.body.mainContent,
+      added: moment(new Date()).fromNow(),
     });
     res.redirect('/');
 });
