@@ -5,5 +5,5 @@ block content
         form(method='POST' action='/new')
             input(class='form-input' type='text' placeholder='Title' name='title' required maxlength='35')
             textarea(class = 'form-input' placeholder='Enter some info!' name='mainContent')
-            input(class = 'form-input' type='text' placeholder='Username' name='username' maxlength='15')
+            input(class = 'form-input' type='text' placeholder='Username' name='username' required maxlength='15')
             input(class = '' type='submit' value='Post')
