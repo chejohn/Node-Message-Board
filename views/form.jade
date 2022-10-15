@@ -3,8 +3,8 @@ extends layout
 block content
     div(class='form-container')
         form(method='POST' action='/new')
-            input(type='text' placeholder='Title' name='title')
-            textarea(placeholder='Enter some info!' name='mainContent')
-            input(type='text' placeholder='Username' name='username')
-            input(type='submit' value='Post')
+            input(class='form-input' type='text' placeholder='Title' name='title' required maxlength='35')
+            textarea(class = 'form-input' placeholder='Enter some info!' name='mainContent')
+            input(class = 'form-input' type='text' placeholder='Username' name='username' maxlength='15')
+            input(class = 'form-input' type='submit' value='Post')
     

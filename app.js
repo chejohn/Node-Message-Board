@@ -41,3 +41,8 @@ app.use(function(err, req, res, next) {
 app.listen(3000);
 
 module.exports = app;
+
+/*
+  - need to work on validation (making sure there is text)
+  - deploy to heroku
+*/ 

@@ -3,6 +3,18 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script.
+      console.log(document.getElementsByClassName('form-input'))
+      for (input of document.getElementsByClassName('form-input')) {
+        console.log(input)
+        input.addEventListener('blur', () => {
+        const strippedString = input.value.trim();
+        console.log('nigga')
+        if (!strippedString) {
+          input.setCustomValidity('Invalid field.');
+        }    
+      });
+      }
   body
     div(class='top-ribbon')
       h1(class='header') Message Board
