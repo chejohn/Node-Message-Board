@@ -1,0 +1,4 @@
+---
+alwaysApply: true
+---
+- Use PascalCase for variable and function names
